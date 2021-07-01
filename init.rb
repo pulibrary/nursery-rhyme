@@ -4,3 +4,7 @@
 APP_ROOT = File.dirname(__FILE__)
 
 require_relative('lib/reciter')
+
+nursery_rhyme = Reciter.new
+
+puts nursery_rhyme.to_s

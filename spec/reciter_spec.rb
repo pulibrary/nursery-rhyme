@@ -6,7 +6,7 @@ describe Reciter do
 
   it 'returns a string for the rhyme "The House that Jack Built"' do
     rhyme = File.open(rhyme_path).read
-    expect(Reciter.to_s).to eq(rhyme)
+    expect(subject.to_s).to eq(rhyme)
   end
 
 end

@@ -24,7 +24,6 @@ describe Reciter do
 
       random_indices2 = [11, 4, 7, 5, 3, 1, 8, 0, 6, 9, 10, 2]
       random_rhyme2 = File.open('spec/fixtures/nursery_rhyme_random2.txt').read
-
       expect(subject.recite_random_rhyme(random_indices2)).to eq(random_rhyme2)
     end
 

@@ -17,10 +17,7 @@ describe Reciter do
   describe '#recite_random_rhyme' do
 
     it 'returns a string for the rhyme with each element in random order' do
-      phrases = []
-      File.open(rhyme_phrases_path).each_line do |line|
-        phrases.push(line)
-      end
+      phrases = File.open(rhyme_phrases_path).readlines
 
       random_indices = subject.generate_random_indices
       continous_phrase = ""

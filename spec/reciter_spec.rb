@@ -5,16 +5,16 @@ describe Reciter do
   let(:rhyme_path) { 'spec/fixtures/the_house_that_jack_built.txt' }
   let(:rhyme_phrases_path) { 'spec/fixtures/the_house_that_jack_built_phrases.txt' }
 
-  describe '#read' do
+  describe '#recite_rhyme' do
 
     it 'returns a string for the rhyme' do
       rhyme = File.open(rhyme_path).read
-      expect(subject.read).to eq(rhyme)
+      expect(subject.recite_rhyme).to eq(rhyme)
     end
 
   end
 
-  describe '#read_random' do
+  describe '#recite_random_rhyme' do
 
     it 'returns a string for the rhyme with each element in random order' do
       phrases = []
@@ -32,7 +32,7 @@ describe Reciter do
         random_rhyme += "This is " + continous_phrase.strip + ".\n"
       end
 
-      expect(subject.read_random(random_numbers)).to eq(random_rhyme)
+      expect(subject.recite_random_rhyme(random_numbers)).to eq(random_rhyme)
     end
 
   end

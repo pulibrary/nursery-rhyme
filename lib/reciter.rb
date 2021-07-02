@@ -1,6 +1,6 @@
 class Reciter
 
-  def read
+  def recite_rhyme
     "This is the house that Jack built.\n" +
     "This is the malt that lay in the house that Jack built.\n" +
     "This is the rat that ate the malt that lay in the house that Jack built.\n" +

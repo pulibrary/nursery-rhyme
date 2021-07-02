@@ -7,4 +7,4 @@ require_relative('lib/reciter')
 
 nursery_rhyme = Reciter.new
 
-puts nursery_rhyme.read
+puts nursery_rhyme.recite_rhyme

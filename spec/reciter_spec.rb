@@ -26,7 +26,7 @@ describe Reciter do
       continous_phrase = ""
       random_rhyme = ""
 
-      for index in random_indices
+      for random_index in random_indices
         continous_phrase = phrases[random_index].strip + " " + continous_phrase
         random_rhyme += "This is " + continous_phrase.strip + ".\n"
       end

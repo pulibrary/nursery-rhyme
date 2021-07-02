@@ -43,9 +43,10 @@ class Reciter
     random_rhyme
   end
 
-  def generate_random_indices
-    indices = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
-    indices.shuffle
-  end
+  private
+    def generate_random_indices
+      indices = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+      indices.shuffle
+    end
 
 end

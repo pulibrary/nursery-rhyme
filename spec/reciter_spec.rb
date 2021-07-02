@@ -22,17 +22,17 @@ describe Reciter do
         phrases.push(line)
       end
 
-      random_numbers = subject.generate_random_indices
+      random_indices = subject.generate_random_indices
       continous_phrase = ""
       random_rhyme = ""
       first = true
 
-      for number in random_numbers
-        continous_phrase = phrases[number].strip + " " + continous_phrase
+      for index in random_indices
+        continous_phrase = phrases[random_index].strip + " " + continous_phrase
         random_rhyme += "This is " + continous_phrase.strip + ".\n"
       end
 
-      expect(subject.recite_random_rhyme(random_numbers)).to eq(random_rhyme)
+      expect(subject.recite_random_rhyme(random_indices)).to eq(random_rhyme)
     end
 
   end

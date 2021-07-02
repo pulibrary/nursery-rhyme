@@ -18,17 +18,17 @@ describe Reciter do
 
     it 'returns a string for the rhyme with each element in random order' do
       phrases = File.open(rhyme_phrases_path).readlines
-      indices1 = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11].shuffle
-      indices2 = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11].shuffle
-
+      indices = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
       random_indices1 = indices.shuffle
+      random_indices2 = indices.shuffle
       continous_phrase = ""
       random_rhyme = ""
+
       for random_index in random_indices1
         continous_phrase = phrases[random_index].strip + " " + continous_phrase
         random_rhyme += "This is " + continous_phrase.strip + ".\n"
       end
-      
+
       expect(subject.recite_random_rhyme(random_indices1)).to eq(random_rhyme)
       expect(subject.recite_random_rhyme(random_indices2)).not_to eq(random_rhyme)
     end

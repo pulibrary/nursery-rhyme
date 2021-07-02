@@ -25,7 +25,6 @@ describe Reciter do
       random_indices = subject.generate_random_indices
       continous_phrase = ""
       random_rhyme = ""
-      first = true
 
       for index in random_indices
         continous_phrase = phrases[random_index].strip + " " + continous_phrase

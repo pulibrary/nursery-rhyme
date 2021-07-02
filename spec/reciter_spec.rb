@@ -22,7 +22,7 @@ describe Reciter do
         phrases.push(line)
       end
 
-      random_numbers = subject.generate_random_numbers
+      random_numbers = subject.generate_random_indices
       continous_phrase = ""
       random_rhyme = ""
       first = true

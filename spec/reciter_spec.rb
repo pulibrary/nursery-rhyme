@@ -19,7 +19,7 @@ describe Reciter do
     it 'returns a string for the rhyme with each element in random order' do
       phrases = File.open(rhyme_phrases_path).readlines
 
-      random_indices = subject.generate_random_indices
+      random_indices = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11].shuffle
       continous_phrase = ""
       random_rhyme = ""
 

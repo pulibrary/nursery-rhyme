@@ -44,16 +44,8 @@ class Reciter
   end
 
   def generate_random_indices
-    random_indices = []
     indices = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
-
-    while indices.length > 0
-      random_index = indices.sample
-      random_indices.push(random_index)
-      indices.delete(random_index)
-    end
-
-    random_indices
+    indices.shuffle
   end
 
 end

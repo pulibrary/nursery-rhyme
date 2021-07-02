@@ -36,6 +36,4 @@ describe Reciter do
 
   end
 
-
-
 end

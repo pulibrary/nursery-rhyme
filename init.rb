@@ -7,4 +7,10 @@ require_relative('lib/reciter')
 
 nursery_rhyme = Reciter.new
 
-puts nursery_rhyme.read
+puts '"The House That Jack Built":'
+puts "-" * 28
+puts nursery_rhyme.recite_rhyme
+puts "\n"
+puts '"The House That Jack Built" in random order:'
+puts "-" * 44
+puts nursery_rhyme.recite_random_rhyme

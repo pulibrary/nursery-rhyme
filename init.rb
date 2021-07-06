@@ -14,3 +14,7 @@ puts "\n"
 puts '"The House That Jack Built" in random order:'
 puts "-" * 44
 puts nursery_rhyme.recite_random_rhyme
+puts "\n"
+puts '"The House That Jack Built" in semi-random order:'
+puts "-" * 49
+puts nursery_rhyme.recite_semirandom_rhyme

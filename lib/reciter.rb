@@ -42,7 +42,7 @@ class Reciter
   private
 
     def generate_random_indices
-      [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11].shuffle
+      (0..11).to_a.shuffle
     end
 
     def phrases

@@ -2,10 +2,6 @@ require 'reciter'
 
 describe Reciter do
 
-  let(:rhyme_path) { 'spec/fixtures/the_house_that_jack_built.txt' }
-  let(:random_rhyme_path_1) { 'spec/fixtures/the_house_that_jack_built_phrases.txt' }
-  let(:random_rhyme_phrases_path) { 'spec/fixtures/the_house_that_jack_built_phrases.txt' }
-
   describe '#recite_rhyme' do
 
     it 'returns a string for the rhyme' do

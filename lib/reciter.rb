@@ -29,6 +29,8 @@ class Reciter
 
   def recite_semirandom_rhyme(semirandom_indices=nil)
     semirandom_indices ||= generate_random_indices
+
+    # make sure that the phrase 'the house that jack built' is always first
     semirandom_indices.delete(0)
     semirandom_indices.unshift(0)
     continous_phrase = ""

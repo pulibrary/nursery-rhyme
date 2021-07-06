@@ -12,7 +12,7 @@ class Reciter
     rhyme
   end
 
-  def recite_random_rhyme(random_indices=generate_random_indices)
+  def recite_random_rhyme(random_indices=(0..11).to_a.shuffle)
     continous_phrase = ""
     rhyme = ""
 
@@ -24,7 +24,7 @@ class Reciter
     rhyme
   end
 
-  def recite_semirandom_rhyme(semirandom_indices=generate_random_indices)
+  def recite_semirandom_rhyme(semirandom_indices=(0..11).to_a.shuffle)
     # make sure that the phrase 'the house that jack built' is always first
     semirandom_indices.delete(0)
     semirandom_indices.unshift(0)
@@ -40,10 +40,6 @@ class Reciter
   end
 
   private
-
-    def generate_random_indices
-      (0..11).to_a.shuffle
-    end
 
     def phrases
       [

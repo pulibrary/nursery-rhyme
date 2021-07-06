@@ -1,45 +1,32 @@
 class Reciter
 
   def recite_rhyme
-    continous_phrase = ""
-    rhyme = ""
-
-    for phrase in phrases
-      continous_phrase = phrase.strip + " " + continous_phrase
-      rhyme += "This is " + continous_phrase.strip + ".\n"
-    end
-
-    rhyme
+    rhyme((0..11).to_a)
   end
 
   def recite_random_rhyme(random_indices=(0..11).to_a.shuffle)
-    continous_phrase = ""
-    rhyme = ""
-
-    for index in random_indices
-      continous_phrase = phrases[index].strip + " " + continous_phrase
-      rhyme += "This is " + continous_phrase.strip + ".\n"
-    end
-
-    rhyme
+    rhyme(random_indices)
   end
 
   def recite_semirandom_rhyme(semirandom_indices=(0..11).to_a.shuffle)
     # make sure that the phrase 'the house that jack built' is always first
     semirandom_indices.delete(0)
     semirandom_indices.unshift(0)
-    continous_phrase = ""
-    rhyme = ""
-
-    for index in semirandom_indices
-      continous_phrase = phrases[index].strip + " " + continous_phrase
-      rhyme += "This is " + continous_phrase.strip + ".\n"
-    end
-
-    rhyme
+    rhyme(semirandom_indices)
   end
 
   private
+    def rhyme(indices)
+      continous_phrase = ""
+      rhyme = ""
+
+      for index in indices
+        continous_phrase = phrases[index].strip + " " + continous_phrase
+        rhyme += "This is " + continous_phrase.strip + ".\n"
+      end
+
+      rhyme
+    end
 
     def phrases
       [

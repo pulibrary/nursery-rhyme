@@ -52,7 +52,7 @@ class Reciter
     end
 
     def get_rhyme_phrases
-      phrases = [
+      [
         "the house that Jack built",
         "the malt that lay in",
         "the rat that ate",

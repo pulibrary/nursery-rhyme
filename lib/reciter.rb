@@ -2,7 +2,6 @@ class Reciter
 
   def recite_rhyme
     index = 0
-    phrases = get_rhyme_phrases
     continous_phrase = ""
     rhyme = ""
 
@@ -17,7 +16,6 @@ class Reciter
 
   def recite_random_rhyme(random_indices=nil)
     random_indices ||= generate_random_indices
-    phrases = get_rhyme_phrases
     continous_phrase = ""
     rhyme = ""
 
@@ -33,7 +31,6 @@ class Reciter
     semirandom_indices ||= generate_random_indices
     semirandom_indices.delete(0)
     semirandom_indices.unshift(0)
-    phrases = get_rhyme_phrases
     continous_phrase = ""
     rhyme = ""
 
@@ -51,7 +48,7 @@ class Reciter
       [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11].shuffle
     end
 
-    def get_rhyme_phrases
+    def phrases
       [
         "the house that Jack built",
         "the malt that lay in",

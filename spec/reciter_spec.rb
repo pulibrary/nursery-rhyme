@@ -31,7 +31,7 @@ describe Reciter do
 
   describe '#recite_semirandom_rhyme' do
 
-    it 'returns the rhyme with each element in semirandom order' do
+    it 'returns the rhyme with each element in semi-random order' do
       semirandom_indices1 = [0, 7, 10, 6, 4, 5, 2, 3, 11, 8, 1, 9]
       semirandom_rhyme1 = File.open('spec/fixtures/nursery_rhyme_semirandom1.txt').read
       expect(subject.recite_semirandom_rhyme(semirandom_indices1)).to eq(semirandom_rhyme1)

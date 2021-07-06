@@ -1,14 +1,12 @@
 class Reciter
 
   def recite_rhyme
-    index = 0
     continous_phrase = ""
     rhyme = ""
 
-    while index < 12
-      continous_phrase = phrases[index].strip + " " + continous_phrase
+    for phrase in phrases
+      continous_phrase = phrase.strip + " " + continous_phrase
       rhyme += "This is " + continous_phrase.strip + ".\n"
-      index += 1
     end
 
     rhyme

@@ -29,6 +29,22 @@ class Reciter
     random_rhyme
   end
 
+  def recite_semirandom_rhyme(semirandom_indices=nil)
+    semirandom_indices ||= generate_random_indices
+    semirandom_indices.delete(0)
+    semirandom_indices.unshift(0)
+    phrases = rhyme_phrases
+    continous_phrase = ""
+    semirandom_rhyme = ""
+
+    for semirandom_index in semirandom_indices
+      continous_phrase = phrases[semirandom_index].strip + " " + continous_phrase
+      semirandom_rhyme += "This is " + continous_phrase.strip + ".\n"
+    end
+
+    semirandom_rhyme
+  end
+
   private
 
     def generate_random_indices

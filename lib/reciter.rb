@@ -19,14 +19,14 @@ class Reciter
     random_indices ||= generate_random_indices
     phrases = get_rhyme_phrases
     continous_phrase = ""
-    random_rhyme = ""
+    rhyme = ""
 
-    for random_index in random_indices
-      continous_phrase = phrases[random_index].strip + " " + continous_phrase
-      random_rhyme += "This is " + continous_phrase.strip + ".\n"
+    for index in random_indices
+      continous_phrase = phrases[index].strip + " " + continous_phrase
+      rhyme += "This is " + continous_phrase.strip + ".\n"
     end
 
-    random_rhyme
+    rhyme
   end
 
   def recite_semirandom_rhyme(semirandom_indices=nil)
@@ -35,14 +35,14 @@ class Reciter
     semirandom_indices.unshift(0)
     phrases = get_rhyme_phrases
     continous_phrase = ""
-    semirandom_rhyme = ""
+    rhyme = ""
 
-    for semirandom_index in semirandom_indices
-      continous_phrase = phrases[semirandom_index].strip + " " + continous_phrase
-      semirandom_rhyme += "This is " + continous_phrase.strip + ".\n"
+    for index in semirandom_indices
+      continous_phrase = phrases[index].strip + " " + continous_phrase
+      rhyme += "This is " + continous_phrase.strip + ".\n"
     end
 
-    semirandom_rhyme
+    rhyme
   end
 
   private

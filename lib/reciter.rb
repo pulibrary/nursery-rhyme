@@ -17,15 +17,16 @@ class Reciter
 
   private
     def rhyme(indices)
-      continous_phrase = ""
-      rhyme = ""
-
-      for index in indices
-        continous_phrase = phrases[index].strip + " " + continous_phrase
-        rhyme += "This is " + continous_phrase.strip + ".\n"
+      indices.map! do |i|
+        phrases[i]
       end
 
-      rhyme
+      ordered_phrases = indices.each_with_index.map do |_phrase, i|
+        phrase = indices[0..i].reverse.join(" ")
+        "This is #{phrase}."
+      end
+
+      ordered_phrases.join("\n")
     end
 
     def phrases

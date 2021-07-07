@@ -23,6 +23,12 @@ class Reciter
 
       lines = ordered_phrases.each_with_index.map do |_phrase, i|
         phrase = ordered_phrases[0..i].reverse.join(" ")
+      ordered_phrases = indices.map! do |i|
+        phrases[i]
+      end
+
+      lines = indices.each_with_index.map do |_phrase, i|
+        phrase = indices[0..i].reverse.join(" ")
         "This is #{phrase}."
       end
 

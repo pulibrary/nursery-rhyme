@@ -17,16 +17,16 @@ class Reciter
 
   private
     def rhyme(indices)
-      indices.map! do |i|
+      ordered_phrases = indices.map! do |i|
         phrases[i]
       end
 
-      ordered_phrases = indices.each_with_index.map do |_phrase, i|
+      lines = indices.each_with_index.map do |_phrase, i|
         phrase = indices[0..i].reverse.join(" ")
         "This is #{phrase}."
       end
 
-      ordered_phrases.join("\n")
+      lines.join("\n")
     end
 
     def phrases
